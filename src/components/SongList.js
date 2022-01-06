@@ -3,7 +3,12 @@ import React from "react";
 const SongList = ({songs}) => {
     
     const songsItems = songs.map((song, index) => {
-        return <li song={song} key={index}>Chart Position: {index + 1}, Title - Artist: {song.title.label}</li>
+        return ( 
+            <>
+                <li song={song} key={index}>No.{index + 1}:  {song.title.label}</li>
+                <hr/>
+            </>
+        )
     })
     
     return (
